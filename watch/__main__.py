@@ -27,6 +27,7 @@ def on_created(event):
         compileSPLFile(fileModified,"Created","spl")
     elif '.expl $' in fileModified + " $" :
         compileSPLFile(fileModified,"Created","expl")
+        os.system("rm assemblycode.xsm")
 
 def on_modified(event):
     fileModified = event.src_path
@@ -34,6 +35,7 @@ def on_modified(event):
         compileSPLFile(fileModified,"Modified","spl")
     elif '.expl $' in fileModified + " $" :
         compileSPLFile(fileModified,"Modified","expl")
+        os.system("rm assemblycode.xsm")
 
 def on_moved(event):
     fileModified = event.dest_path
@@ -41,6 +43,7 @@ def on_moved(event):
         compileSPLFile(fileModified,"Moved","spl")
     elif '.expl $' in fileModified + " $" :
         compileSPLFile(fileModified,"Moved","expl")
+        os.system("rm assemblycode.xsm")
 
 def on_deleted(event):
     pass
