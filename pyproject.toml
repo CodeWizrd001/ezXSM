@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "splselfcompileutility"
+version = "0.1.0"
+description = ""
+authors = ["CodeWizard <codewizard001@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+watchdog = "^0.10.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
